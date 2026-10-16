@@ -25,3 +25,14 @@ g++ -std=c++17 -O2 forwardprop.cpp -o forwardprop
 - [ ] Loss function
 - [ ] Backpropagation
 - [ ] Train a small network end to end
+
+
+## Every time you want to save progress
+
+`git status`
+Lists the files that changed since your last commit. You can run it anytime to check where you are.
+
+
+`git add .`
+`git commit -m "Add sigmoid to forward pass"`
+`git push`
