@@ -1,21 +1,27 @@
 #include <bits/stdc++.h>
 
-using namespace std;
 
-double activation_calc(vector<double> i_n,vector<double> w_n,double bias)
+double activation_calc(std::vector<double> i_n,std::vector<double> w_n,double bias)
 {
-    int size = sizeof(i_n);
+    double tot=0; // not setting it to the bias yet in case i want to incorporate sum activattion function like a sigmoid or smth
 
-    for(int i = 0; i< size;i++)
+    for(int i = 0; i< i_n.size();i++)
     {
-        
+        tot+= i_n[i] * w_n[i];
     }
-    return 0;
+
+    tot += bias;
+    return tot;
 }
 
 
 int main()
 {
+    std::vector<double> input_neurons ={2,3};
+    std::vector<std::vector<double>> weights = {{0.4,0.3},{0.7,0.9}};
+    std::vector<double> bias = {0,0};
+
+    std::cout << activation_calc(input_neurons, weights[0],bias[0]) + activation_calc(input_neurons, weights[1], bias[1]);
     return 0;
 }
 

@@ -34,5 +34,7 @@ Lists the files that changed since your last commit. You can run it anytime to c
 
 
 `git add .`
+
 `git commit -m "Add sigmoid to forward pass"`
+
 `git push`
